@@ -10,18 +10,15 @@ import SceneKit
 import ARKit
 
 
-
 class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
     var hero: SCNNode!
     var heroTemplateNode: SCNNode!
-    
     var gameWorldCenterTransform: SCNMatrix4 = SCNMatrix4Identity
     var statusMessage: String = ""
     var trackingStatus: String = ""
-    
     var flashlight = Flashlight()
     
     
@@ -56,19 +53,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the view's delegate
-        //        sceneView.delegate = self
-        
-        
-        // Show statistics such as fps and timing information
-        //        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        //        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        //        sceneView.scene = scene
         
         
         
@@ -113,7 +97,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func initSceneView() {
         arscnView.delegate = self
-        arscnView.autoenablesDefaultLighting = true
+//        arscnView.autoenablesDefaultLighting = true
         
         
     }
@@ -149,6 +133,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+ 
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -187,6 +172,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             self.startButton.isHidden = true
             self.createGameWorld()
             self.flashlight.toggleTorch(on: false)
+           
         }
     }
     func createGameWorld() {
@@ -194,6 +180,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         skView.isHidden = false
         addHero(to: arscnView.scene.rootNode)
+        addLightNode(to: arscnView.scene.rootNode)
     }
     
     
@@ -203,36 +190,42 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         hero.name = Constants.heroNodeName
         hero.position = SCNVector3(0, -0.5, -2)
         hero.eulerAngles = SCNVector3(0,90.0.degreesToRadians,0)
-        
-        hero.scale = SCNVector3(0.04, 0.04, 0.04)
+        hero.scale = SCNVector3(0.02, 0.02, 0.02)
         
         rootNode.addChildNode(hero)
+    }
+    
+    func addLightNode(to rootNode: SCNNode) {
+        // Create ambient light
+        let ambientLightNode = SCNNode()
+        ambientLightNode.light = SCNLight()
+        ambientLightNode.light!.type = .ambient
+        ambientLightNode.light!.color = UIColor(white: 0.70, alpha: 1.0)
+
+
+        // Add ambient light to scene
+        rootNode.addChildNode(ambientLightNode)
+        
+        
+        // Create directional light
+        let directionalLight = SCNNode()
+        directionalLight.light = SCNLight()
+        directionalLight.light!.type = .directional
+        directionalLight.light!.color = UIColor(white: 1.0, alpha: 1.0)
+        directionalLight.eulerAngles = SCNVector3(x: 5, y: 5, z: 5)
+//        directionalLight.position = SCNVector3Zero
+        directionalLight.light?.intensity = 5000
+        
+        // Add directional light to scene
+        rootNode.addChildNode(directionalLight)
+
     }
     
     
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     
     // MARK: - ARSCNViewDelegate

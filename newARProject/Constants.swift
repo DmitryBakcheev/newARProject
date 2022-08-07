@@ -9,7 +9,7 @@ import UIKit
 
 
 var joystickNotificationName = NSNotification.Name("joystickNotificationName")
-let joystickVelocityMultiplier: CGFloat = 0.0005
+let joystickVelocityMultiplier: CGFloat = 0.0003
 
 struct Constants {
     static let heroNodeName = "hero"
