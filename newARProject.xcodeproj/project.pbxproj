@@ -11,6 +11,7 @@
 		E35A7BCA2891FD1B0072F614 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A7BC92891FD1B0072F614 /* Constants.swift */; };
 		E35A7BCC2892040E0072F614 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A7BCB2892040E0072F614 /* Extensions.swift */; };
 		E35A7BD028920F930072F614 /* ARJoystickSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A7BCF28920F930072F614 /* ARJoystickSKScene.swift */; };
+		E35A7C0E289F42970072F614 /* Flashlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A7C0D289F42970072F614 /* Flashlight.swift */; };
 		E3D0BC0D2891DDBE006523C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0BC0C2891DDBE006523C6 /* AppDelegate.swift */; };
 		E3D0BC0F2891DDBE006523C6 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D0BC0E2891DDBE006523C6 /* art.scnassets */; };
 		E3D0BC112891DDBE006523C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0BC102891DDBE006523C6 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		E35A7BC92891FD1B0072F614 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E35A7BCB2892040E0072F614 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E35A7BCF28920F930072F614 /* ARJoystickSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARJoystickSKScene.swift; sourceTree = "<group>"; };
+		E35A7C0D289F42970072F614 /* Flashlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashlight.swift; sourceTree = "<group>"; };
 		E3D0BC092891DDBE006523C6 /* newARProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newARProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D0BC0C2891DDBE006523C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D0BC0E2891DDBE006523C6 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				E3D0BC122891DDBE006523C6 /* Main.storyboard */,
 				E3D0BC152891DDC2006523C6 /* Assets.xcassets */,
 				E3D0BC172891DDC2006523C6 /* LaunchScreen.storyboard */,
+				E35A7C0D289F42970072F614 /* Flashlight.swift */,
 			);
 			path = newARProject;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				E35A7BD028920F930072F614 /* ARJoystickSKScene.swift in Sources */,
 				E35A7BCA2891FD1B0072F614 /* Constants.swift in Sources */,
 				E3D0BC112891DDBE006523C6 /* ViewController.swift in Sources */,
+				E35A7C0E289F42970072F614 /* Flashlight.swift in Sources */,
 				E35A7BC82891F8E40072F614 /* AnalogJoystick.swift in Sources */,
 				E3D0BC0D2891DDBE006523C6 /* AppDelegate.swift in Sources */,
 			);

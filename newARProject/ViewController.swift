@@ -22,6 +22,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var statusMessage: String = ""
     var trackingStatus: String = ""
     
+    var flashlight = Flashlight()
+    
     
     
     let arscnView: ARSCNView = {
@@ -184,6 +186,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             self.startButton.isHidden = true
             self.createGameWorld()
+            self.flashlight.toggleTorch(on: false)
         }
     }
     func createGameWorld() {
