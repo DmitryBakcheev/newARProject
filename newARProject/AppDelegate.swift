@@ -6,16 +6,28 @@
 //
 
 import UIKit
+import ARKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+      // Override point for customization after application launch.
+      
+      window = UIWindow()
+      window?.makeKeyAndVisible()
+      
+      let viewController = ViewController()
+      window?.rootViewController = viewController
+      
+      UIApplication.shared.isIdleTimerDisabled = true
+        
+        
+      
+      return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
