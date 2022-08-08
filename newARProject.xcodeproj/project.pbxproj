@@ -12,6 +12,8 @@
 		E35A7BCC2892040E0072F614 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A7BCB2892040E0072F614 /* Extensions.swift */; };
 		E35A7BD028920F930072F614 /* ARJoystickSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A7BCF28920F930072F614 /* ARJoystickSKScene.swift */; };
 		E35A7C0E289F42970072F614 /* Flashlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A7C0D289F42970072F614 /* Flashlight.swift */; };
+		E35A7C1328A15A040072F614 /* SoundFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A7C1228A15A040072F614 /* SoundFuncs.swift */; };
+		E35A7C1528A15E090072F614 /* harmony.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E35A7C1428A15E090072F614 /* harmony.mp3 */; };
 		E3D0BC0D2891DDBE006523C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0BC0C2891DDBE006523C6 /* AppDelegate.swift */; };
 		E3D0BC0F2891DDBE006523C6 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D0BC0E2891DDBE006523C6 /* art.scnassets */; };
 		E3D0BC112891DDBE006523C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0BC102891DDBE006523C6 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		E35A7BCB2892040E0072F614 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E35A7BCF28920F930072F614 /* ARJoystickSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARJoystickSKScene.swift; sourceTree = "<group>"; };
 		E35A7C0D289F42970072F614 /* Flashlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashlight.swift; sourceTree = "<group>"; };
+		E35A7C1228A15A040072F614 /* SoundFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFuncs.swift; sourceTree = "<group>"; };
+		E35A7C1428A15E090072F614 /* harmony.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = harmony.mp3; sourceTree = "<group>"; };
 		E3D0BC092891DDBE006523C6 /* newARProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newARProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D0BC0C2891DDBE006523C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D0BC0E2891DDBE006523C6 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -85,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E35A7C1128A159840072F614 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E35A7C1428A15E090072F614 /* harmony.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		E3D0BC002891DDBE006523C6 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +120,7 @@
 		E3D0BC0B2891DDBE006523C6 /* newARProject */ = {
 			isa = PBXGroup;
 			children = (
+				E35A7C1128A159840072F614 /* Sounds */,
 				E3D0BC0C2891DDBE006523C6 /* AppDelegate.swift */,
 				E3D0BC0E2891DDBE006523C6 /* art.scnassets */,
 				E3D0BC102891DDBE006523C6 /* ViewController.swift */,
@@ -119,6 +132,7 @@
 				E3D0BC152891DDC2006523C6 /* Assets.xcassets */,
 				E3D0BC172891DDC2006523C6 /* LaunchScreen.storyboard */,
 				E35A7C0D289F42970072F614 /* Flashlight.swift */,
+				E35A7C1228A15A040072F614 /* SoundFuncs.swift */,
 			);
 			path = newARProject;
 			sourceTree = "<group>";
@@ -244,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E35A7C1528A15E090072F614 /* harmony.mp3 in Resources */,
 				E3D0BC0F2891DDBE006523C6 /* art.scnassets in Resources */,
 				E3D0BC192891DDC2006523C6 /* LaunchScreen.storyboard in Resources */,
 				E3D0BC162891DDC2006523C6 /* Assets.xcassets in Resources */,
@@ -275,6 +290,7 @@
 				E35A7BCC2892040E0072F614 /* Extensions.swift in Sources */,
 				E35A7BD028920F930072F614 /* ARJoystickSKScene.swift in Sources */,
 				E35A7BCA2891FD1B0072F614 /* Constants.swift in Sources */,
+				E35A7C1328A15A040072F614 /* SoundFuncs.swift in Sources */,
 				E3D0BC112891DDBE006523C6 /* ViewController.swift in Sources */,
 				E35A7C0E289F42970072F614 /* Flashlight.swift in Sources */,
 				E35A7BC82891F8E40072F614 /* AnalogJoystick.swift in Sources */,

@@ -19,6 +19,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var gameWorldCenterTransform: SCNMatrix4 = SCNMatrix4Identity
     var statusMessage: String = ""
     var trackingStatus: String = ""
+    var player: AVAudioPlayer?
     var flashlight = Flashlight()
     
     
@@ -64,6 +65,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         loadModels()
         setupSKViewScene()
         setupARSCNViewSubviews()
+       
         
         NotificationCenter.default.addObserver(forName: joystickNotificationName, object: nil, queue: OperationQueue.main) { (notification) in
             guard let userInfo = notification.userInfo else { return }
@@ -172,6 +174,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             self.startButton.isHidden = true
             self.createGameWorld()
             self.flashlight.toggleTorch(on: false)
+            
            
         }
     }
@@ -181,6 +184,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         skView.isHidden = false
         addHero(to: arscnView.scene.rootNode)
         addLightNode(to: arscnView.scene.rootNode)
+        playBackgroundMusic(to: arscnView.scene.rootNode)
     }
     
     
